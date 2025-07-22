@@ -1,116 +1,116 @@
-# DocuMind - AI Document Assistant
+# DocuMind - Asistente de Documentos con IA
 
-A modern web application that allows users to upload documents and chat with them using AI-powered RAG (Retrieval Augmented Generation).
+Una aplicación web moderna que permite a los usuarios cargar documentos y chatear con ellos usando RAG (Generación Aumentada por Recuperación) impulsada por IA.
 
-## Features
+## Características
 
-- 🔐 **Authentication**: Secure login with Supabase Auth (Email + Google OAuth)
-- 📄 **Document Upload**: Support for PDF, DOCX, TXT, and Markdown files
-- 🤖 **AI Chat**: Chat with your documents using OpenAI GPT-4o
-- 📊 **Smart Summaries**: Automatic document summarization
-- 🎨 **Modern UI**: Clean, responsive design with dark/light mode
-- 🔍 **Vector Search**: Semantic search using embeddings
-- 📱 **Mobile Friendly**: Fully responsive design
+- 🔐 **Autenticación**: Inicio de sesión seguro con Supabase Auth (Email + Google OAuth)
+- 📄 **Carga de Documentos**: Soporte para archivos PDF, DOCX, TXT y Markdown
+- 🤖 **Chat con IA**: Chatea con tus documentos usando OpenAI GPT-4o
+- 📊 **Resúmenes Inteligentes**: Resumen automático de documentos
+- 🎨 **Interfaz de Usuario Moderna**: Diseño limpio y responsivo con modo claro/oscuro
+- 🔍 **Búsqueda Vectorial**: Búsqueda semántica usando embeddings
+- 📱 **Adaptable a Móviles**: Diseño completamente responsivo
 
-## Tech Stack
+## Tecnologías Utilizadas
 
-- **Framework**: Next.js 15 with App Router
-- **Styling**: TailwindCSS + shadcn/ui
-- **Database**: Supabase (PostgreSQL + Vector)
-- **Authentication**: Supabase Auth
-- **AI**: OpenAI GPT-4o + Embeddings
-- **Animations**: Framer Motion
-- **File Upload**: React Dropzone
+- **Framework**: Next.js 15 con App Router
+- **Estilos**: TailwindCSS + shadcn/ui
+- **Base de Datos**: Supabase (PostgreSQL + Vector)
+- **Autenticación**: Supabase Auth
+- **IA**: OpenAI GPT-4o + Embeddings
+- **Animaciones**: Framer Motion
+- **Carga de Archivos**: React Dropzone
 
-## Getting Started
+## Cómo Empezar
 
-### Prerequisites
+### Prerrequisitos
 
-- Node.js 18+ 
-- Supabase account
-- OpenAI API key
+- Node.js 18+
+- Cuenta de Supabase
+- Clave de API de OpenAI
 
-### Installation
+### Instalación
 
-1. Clone the repository:
-\`\`\`bash
+1. Clona el repositorio:
+```bash
 git clone <repository-url>
 cd documind-ai-assistant
-\`\`\`
+```
 
-2. Install dependencies:
-\`\`\`bash
+2. Instala las dependencias:
+```bash
 npm install
-\`\`\`
+```
 
-3. Set up environment variables:
-\`\`\`bash
+3. Configura las variables de entorno:
+```bash
 cp .env.example .env.local
-\`\`\`
+```
 
-Fill in your Supabase and OpenAI credentials.
+Completa con tus credenciales de Supabase y OpenAI.
 
-4. Set up the database:
-   - Create a new Supabase project
-   - Enable the Vector extension
-   - Run the SQL scripts in the \`scripts/\` folder
+4. Configura la base de datos:
+   - Crea un nuevo proyecto en Supabase
+   - Activa la extensión Vector
+   - Ejecuta los scripts SQL en la carpeta `scripts/`
 
-5. Start the development server:
-\`\`\`bash
+5. Inicia el servidor de desarrollo:
+```bash
 npm run dev
-\`\`\`
+```
 
-## Project Structure
+## Estructura del Proyecto
 
-\`\`\`
-├── app/                    # Next.js app directory
-│   ├── api/               # API routes
-│   ├── chat/              # Chat pages
-│   ├── dashboard/         # Dashboard page
-│   ├── login/             # Authentication
-│   └── upload/            # File upload
-├── components/            # React components
-│   ├── ui/               # shadcn/ui components
-│   └── ...               # Custom components
-├── lib/                  # Utilities and configurations
-├── scripts/              # Database scripts
+```
+├── app/                    # Directorio de la app Next.js
+│   ├── api/               # Rutas de la API
+│   ├── chat/              # Páginas de chat
+│   ├── dashboard/         # Página del panel de control
+│   ├── login/             # Autenticación
+│   └── upload/            # Carga de archivos
+├── components/            # Componentes de React
+│   ├── ui/               # Componentes de shadcn/ui
+│   └── ...               # Componentes personalizados
+├── lib/                  # Utilidades y configuraciones
+├── scripts/              # Scripts de base de datos
 └── ...
-\`\`\`
+```
 
-## Key Features Explained
+## Explicación de Características Clave
 
-### Document Processing
-- Text extraction from various file formats
-- Automatic summarization using AI
-- Vector embeddings for semantic search
-- Secure storage in Supabase
+### Procesamiento de Documentos
+- Extracción de texto de varios formatos de archivo
+- Resumen automático usando IA
+- Embeddings vectoriales para búsqueda semántica
+- Almacenamiento seguro en Supabase
 
-### RAG Implementation
-- Document content is embedded using OpenAI's text-embedding-3-small
-- User queries are matched against document embeddings
-- Relevant context is provided to GPT-4o for accurate responses
+### Implementación de RAG
+- El contenido del documento se convierte en embeddings usando `text-embedding-3-small` de OpenAI
+- Las consultas del usuario se comparan con los embeddings del documento
+- Se proporciona contexto relevante a GPT-4o para obtener respuestas precisas
 
-### Security
-- Row Level Security (RLS) in Supabase
-- User isolation for documents and chats
-- Secure file upload and processing
+### Seguridad
+- Row Level Security (RLS) en Supabase
+- Aislamiento de documentos y chats por usuario
+- Carga y procesamiento seguro de archivos
 
-## Deployment
+## Despliegue
 
-The application can be deployed to Vercel with automatic Supabase integration:
+La aplicación se puede desplegar en Vercel con integración automática de Supabase:
 
-1. Push to GitHub
-2. Connect to Vercel
-3. Add environment variables
-4. Deploy
+1. Sube tu código a GitHub
+2. Conecta el repositorio a Vercel
+3. Añade las variables de entorno
+4. Despliega
 
-## Contributing
+## Cómo Contribuir
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+1. Haz un fork del repositorio
+2. Crea una rama para tu nueva característica
+3. Realiza tus cambios
+4. Envía una pull request
 
-## License
+## Licencia
 
-MIT License - see LICENSE file for details.
+Licencia MIT - consulta el archivo `LICENSE` para más detalles.
